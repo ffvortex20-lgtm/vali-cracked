@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>VORTEX CRACKED - Key Generator</title>
+    <style>
+        :root { --neon: #bc13fe; --bg: #0a0a0a; }
+        body { background-color: var(--bg); color: white; font-family: 'Arial', sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .container { border: 2px solid var(--neon); padding: 30px; border-radius: 15px; box-shadow: 0 0 20px var(--neon); text-align: center; }
+        h1 { color: var(--neon); text-shadow: 0 0 10px var(--neon); }
+        img { width: 150px; border-radius: 50%; border: 2px solid var(--neon); margin-bottom: 20px; }
+        button { background: transparent; border: 2px solid var(--neon); color: var(--neon); padding: 10px 20px; cursor: pointer; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+        button:hover { background: var(--neon); color: white; box-shadow: 0 0 15px var(--neon); }
+        #result { margin-top: 20px; color: #fff; font-family: monospace; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="https://i.pinimg.com/736x/7a/cf/7a/7acf7a484eefc490e9f968b10ab94fb0.jpg" alt="Logo">
+    <h1>VORTEX CRACKED</h1>
+    <p>Para gerar sua key, entre no grupo:</p>
+    <a href="https://chat.whatsapp.com/BxcVsfymjhD6NHdlwbBXom" target="_blank" style="color: var(--neon);">Acessar Grupo</a>
+    <br><br>
+    <button onclick="gerarKey()">GERAR KEY (6H)</button>
+    <div id="result"></div>
+</div>
+
+<script>
+    window.APP_CONFIG = {
+        backendUrl: 'https://viku.mypdftools.site',
+        apiKey: 'X7B4N2P8Q9W3Z6M5',
+        currentSlug: 'valimods1',
+        defaultKeyHours: '6',
+    };
+
+    function gerarKey() {
+        const url = `${window.APP_CONFIG.backendUrl}/api/generate?key=${window.APP_CONFIG.apiKey}&slug=${window.APP_CONFIG.currentSlug}&hours=${window.APP_CONFIG.defaultKeyHours}`;
+        
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerText = "Sua Key: " + (data.key || "Erro ao gerar");
+            })
+            .catch(err => {
+                document.getElementById('result').innerText = "Erro ao conectar com a API.";
+            });
+    }
+</script>
+</body>
+</html>
