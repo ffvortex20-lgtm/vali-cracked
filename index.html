@@ -2,53 +2,36 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>VORTEX CRACKED - Gerador</title>
     <style>
-        body { background: #050505; color: #fff; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .card { 
-            background: #111; padding: 30px; border-radius: 20px; text-align: center;
-            border: 2px solid #bc13fe; box-shadow: 0 0 25px #bc13fe;
-            width: 350px;
-        }
-        img { width: 120px; border-radius: 50%; border: 3px solid #bc13fe; margin-bottom: 15px; }
-        h1 { color: #bc13fe; text-shadow: 0 0 10px #bc13fe; margin: 10px 0; }
-        a { color: #bc13fe; text-decoration: underline; font-weight: bold; display: block; margin: 10px 0; }
-        button { 
-            background: #bc13fe; border: none; color: white; padding: 12px 25px; 
-            margin-top: 15px; cursor: pointer; border-radius: 8px; font-weight: bold;
-            width: 100%; transition: 0.3s;
-        }
-        button:hover { background: #9a0fd3; box-shadow: 0 0 15px #bc13fe; }
-        #result { margin-top: 20px; padding: 15px; border: 1px dashed #bc13fe; color: #fff; font-family: monospace; }
+        body { background: #0a0a0a; color: #d4af37; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: #161616; padding: 30px; border-radius: 15px; text-align: center; border: 1px solid #d4af37; box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); width: 350px; }
+        img { width: 80px; border-radius: 15px; border: 2px solid #d4af37; margin-bottom: 10px; }
+        h2 { margin: 5px 0; color: #d4af37; text-transform: uppercase; letter-spacing: 2px; }
+        .key-box { border: 2px solid #d4af37; padding: 20px; margin: 20px 0; font-size: 1.2em; font-weight: bold; background: #000; letter-spacing: 3px; box-shadow: inset 0 0 10px #d4af37; }
+        .btn { background: #d4af37; color: #000; border: none; padding: 12px 20px; cursor: pointer; font-weight: bold; border-radius: 5px; width: 100%; margin-top: 10px; }
+        .btn:hover { background: #b8962d; }
+        a { color: #d4af37; text-decoration: none; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <img src="https://i.pinimg.com/736x/7a/cf/7a/7acf7a484eefc490e9f968b10ab94fb0.jpg">
-    <h1>VORTEX CRACKED</h1>
-    <p>Entre no grupo para liberar o acesso:</p>
-    <a href="https://chat.whatsapp.com/BxcVsfymjhD6NHdlwbBXom">ACESSAR GRUPO</a>
+    <img src="https://viku.mypdftools.site/uploads/valimods1/IMG_20260408_154428_252.jpg">
+    <h2>VALI MODS</h2>
+    <p>AUTHORIZED ACCESS SYSTEM</p>
     
-    <button onclick="gerarKeyDemo()">GERAR KEY (6H)</button>
+    <a href="https://chat.whatsapp.com/BxcVsfymjhD6NHdlwbBXom" target="_blank">🔗 ENTRAR NO GRUPO</a>
     
-    <div id="result">Clique para gerar</div>
+    <div class="key-box" id="keyDisplay">VALIMODS-XXXX-XXXX-6H</div>
+    
+    <button class="btn" onclick="gerarKey()">GERAR KEY (6H)</button>
 </div>
 
 <script>
-    function gerarKeyDemo() {
-        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        let key = "VORTEX-";
-
-        for(let i = 0; i < 4; i++) {
-            for(let j = 0; j < 4; j++) {
-                key += chars[Math.floor(Math.random() * chars.length)];
-            }
-            if(i < 3) key += "-";
-        }
-
-        document.getElementById("result").innerHTML = 
-            `<strong>KEY GERADA:</strong><br><span style="color:#bc13fe; font-size: 1.2em;">${key}</span>`;
+    function gerarKey() {
+        const part = () => Math.random().toString(36).substring(2, 6).toUpperCase();
+        const key = `VALIMODS-${part()}-${part()}-6H`;
+        document.getElementById("keyDisplay").innerText = key;
     }
 </script>
 </body>
